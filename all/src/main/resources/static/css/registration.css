@@ -1,0 +1,22 @@
+@charset "ISO-8859-1";
+
+body {
+	background-image: url("/images/gym3.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	backdrop-filter: blur(5px);
+	background-position: center;
+	
+}
+
+img {
+	width: 130px;
+	height: 100px;
+	margin-top: -40px;
+	margin-bottom: -20px;
+}
+
+.text-center {
+	margin-bottom: 128px;
+	color: aliceblue;
+}

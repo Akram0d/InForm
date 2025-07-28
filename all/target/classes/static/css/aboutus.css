@@ -1,0 +1,17 @@
+@charset "ISO-8859-1";
+
+body {
+	background-image:
+		url('/images/paper.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/* #img-nav { */
+/*     width: 130px; */
+/*     height: 100px; */
+/*     margin-top: -40px; */
+/*     margin-bottom: -20px; */
+/*   } */
+img {
+	height: 300px;
+}
