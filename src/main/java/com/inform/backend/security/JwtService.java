@@ -10,7 +10,7 @@ import java.util.Date;
 @Service
 public class JwtService {
 
-    private static final String SECRET_KEY = "my-super-secret-key-akram-123456789012345678901234567890"; // must be 32+ chars
+    private static final String SECRET_KEY = "Fuck being rational, give them what they ask for.";
 
     private Key getSigningKey() {
         return Keys.hmacShaKeyFor(SECRET_KEY.getBytes());
