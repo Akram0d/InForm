@@ -4,13 +4,17 @@ package com.inform.backend.controller;
 import com.inform.backend.model.Exercise;
 import com.inform.backend.service.ExerciseService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/exercises")
+@RequestMapping("/exercises")
 @CrossOrigin(origins = "*")
 public class ExerciseController {
 
@@ -18,9 +22,11 @@ public class ExerciseController {
     private ExerciseService exerciseService;
 
     @GetMapping
-    public List<Exercise> getAllExercises() {
-        return exerciseService.getAllExercises();
+    public Page<Exercise> getAllExercises(
+            @PageableDefault(page = 0, size = 10, sort = "id", direction = Sort.Direction.ASC) Pageable pageable) {
+        return exerciseService.getAllExercises(pageable);
     }
+
 
     @GetMapping("/{id}")
     public Optional<Exercise> getExerciseById(@PathVariable Long id) {
